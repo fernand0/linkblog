@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Links for 2025-11-29"
 date: 2025-11-29
 ---
