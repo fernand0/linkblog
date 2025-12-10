@@ -72,7 +72,7 @@ def create_jekyll_post(date_str):
         markdown_output += f"- [{link['title'].replace('|', '\|')}]({link['original_link']})\n"
 
     # Define post details
-    post_title = f"Twitter Links for {date_str}"
+    post_title = f"Links for {date_str}"
     post_filename = f"{date_str}-twitter-links.md"
     script_dir = os.path.dirname(os.path.abspath(__file__))
     post_filepath = os.path.join(script_dir, '..', '_posts', post_filename)

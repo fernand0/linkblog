@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Twitter Links for 2025-12-05"
+title: "Links for 2025-12-05"
 date: 2025-12-05
 ---
 
