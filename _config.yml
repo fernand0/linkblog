@@ -28,7 +28,9 @@ twitter_username: fernand0
 github_username:  fernand0
 
 # Build settings
-theme: minimal-mistakes-jekyll
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Make sure this is uncommented if you use GitHub Pages
+
 plugins:
   - jekyll-feed
 
