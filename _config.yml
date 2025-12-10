@@ -28,7 +28,7 @@ twitter_username: fernand0
 github_username:  fernand0
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
