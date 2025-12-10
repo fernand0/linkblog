@@ -1,18 +1,19 @@
 ---
 layout: default
-title: About
+title: About fernand0's linkblog
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Welcome to **fernand0's linkblog**!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+This blog is dedicated to collecting and sharing interesting links posted across various social networks each day. Our goal is to provide a curated selection of content, making it easier for you to discover valuable information and discussions from around the web.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+### About the Author
 
+This linkblog is curated by fernand0. You can connect with me or see more of my work through the following platforms:
 
-[jekyll-organization]: https://github.com/jekyll
+*   **Email:** [linkblogfernand0@elmundoesimperfecto.com](mailto:linkblogfernand0@elmundoesimperfecto.com)
+*   **Twitter:** [@fernand0](https://twitter.com/fernand0)
+*   **GitHub:** [fernand0](https://github.com/fernand0)
+
+Thank you for visiting, and we hope you find the links here insightful!
