@@ -31,7 +31,7 @@ def get_twitter_links_by_date(date_str):
 
     # Initialize the publication cache
     cache = PublicationCache()
-    
+
     # Get all publications from Twitter
     twitter_publications = cache.get_publications_by_service('twitter')
 
@@ -49,7 +49,7 @@ def get_twitter_links_by_date(date_str):
         except (ValueError, TypeError):
             # Ignore publications with invalid date formats
             continue
-            
+
     return links_for_date
 
 def create_jekyll_post(date_str):
@@ -61,7 +61,7 @@ def create_jekyll_post(date_str):
     """
     # Get the links for the specified date
     twitter_links = get_twitter_links_by_date(date_str)
-    
+
     if not twitter_links:
         print(f"No Twitter links found for {date_str}. No post created.")
         return
@@ -80,7 +80,7 @@ def create_jekyll_post(date_str):
 
     # Create the full post content with Jekyll front matter
     post_content = f"""---
-layout: post
+layout: posts
 title: "{post_title}"
 date: {date_str}
 ---
