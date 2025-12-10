@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: posts
 title: "Links for 2025-12-08"
 date: 2025-12-08
 ---
