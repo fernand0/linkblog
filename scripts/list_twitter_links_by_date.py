@@ -69,7 +69,8 @@ def create_jekyll_post(date_str):
     # Generate the Markdown list of links
     markdown_output = ""
     for link in twitter_links:
-        markdown_output += f"- [{link['title'].replace('|', '\|')}]({link['original_link']})\n"
+        escaped_title = link['title'].replace('|', '\\|')
+        markdown_output += f"- [{escaped_title}]({link['original_link']})\n"
 
     # Define post details
     post_title = f"Links for {date_str}"
