@@ -44,9 +44,9 @@ paginate: 100
 paginate_path: /page:num/
 
 #social
+twitter: http://twitter.com/fernand0
+github: http://github.com/fernand0
 facebook: http://facebook.com/fernando.tricas
-twitter_username: fernand0
-github_username:  fernand0
 email: fernand0+web@elmundoesimperfecto.com
 
 # Sass style
