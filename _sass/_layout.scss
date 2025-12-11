@@ -1,0 +1,270 @@
+html,
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+.navbar {
+  border-radius: 0;
+  border-bottom: 1px solid #eee;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+.mt25 {
+  margin-top: 0;
+  @include media-query($on-palm) {
+    margin-top: 25px;
+  }
+}
+
+.p20 {
+  padding: 20px 0;
+}
+.navbar-brand {
+  font-weight: 900;
+  font-size: 1.85em;
+  padding: 10px 0;
+  @media screen and (max-width: $on-palm) {
+    font-size: 1.5em;
+    margin-left: 0;
+  }
+}
+.post-meta {
+  color: $grey-color;
+}
+
+.card {
+  margin-bottom: 2em;
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb,
+      0px 4px 0px #b9b9b9, 0px 6px 0px rgba(0, 0, 0, 0.1),
+      0px 1px 0px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 5px 0px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.1),
+      0 8px 7px rgba(0, 0, 0, 0.1), 0 9px 9px rgba(0, 0, 0, 0.1),
+      0 10px 10px rgba(0, 0, 0, 0.15), 0 15px 15px rgba(0, 0, 0, 0.16);
+  }
+
+  .image {
+    img {
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      @media screen and (max-width: $on-palm) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $grey-color-light;
+}
+
+.social {
+  list-style: none;
+  display: inline;
+  margin-left: 10px;
+  padding: 5px 8px;
+  font-size: 1.25em;
+}
+.social:hover {
+  opacity: 0.7;
+}
+.social img {
+  width: 20px;
+}
+
+.quora img {
+  width: 17px;
+}
+
+.facebook img {
+  width: 16px;
+}
+
+.recent ul {
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+}
+
+.recent {
+  padding: 10px;
+  border: 1px solid $grey-color-light;
+}
+
+.post-img img {
+  width: 100%;
+}
+
+.post-title {
+  line-height: 2;
+  text-decoration: underline;
+}
+.panel-title {
+  font-size: 1.5em;
+}
+
+.index-anchor {
+  text-decoration: none;
+  color: $text-color;
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+article.post {
+  margin-bottom: 5em;
+}
+
+.home .flexRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.home .col {
+  padding: 0 15px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .home .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home .col {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
