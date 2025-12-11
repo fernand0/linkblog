@@ -39,7 +39,7 @@ copyright:
    link: 'http://elmundoesimperfecto.com'
 
 # Build settings
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 paginate: 100
 paginate_path: /page:num/
 
