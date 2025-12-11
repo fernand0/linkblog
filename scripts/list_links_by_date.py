@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This script generates a Markdown list of links published on Twitter for a given date,
+This script generates a Markdown list of links published on social media for a given date,
 using the data from the publication cache.
 """
 
@@ -11,9 +11,8 @@ import os
 from datetime import datetime
 from socialModules.modulePublicationCache import PublicationCache
 
-def get_twitter_links_by_date(date_str):
-    """
-    Retrieves Twitter links for a specific date from the publication cache.
+def get_social_links_by_date(date_str):
+    """Retrieves social media links for a specific date from the publication cache.
 
     Args:
         date_str (str): The date in 'YYYY-MM-DD' format.
@@ -32,12 +31,12 @@ def get_twitter_links_by_date(date_str):
     # Initialize the publication cache
     cache = PublicationCache()
 
-    # Get all publications from Twitter
-    twitter_publications = cache.get_publications_by_service('twitter')
+    # Get all publications from social media
+    social_publications = cache.get_publications_by_service('twitter')
 
     # Filter publications by the selected date
     links_for_date = []
-    for pub in twitter_publications:
+    for pub in social_publications:
         pub_date_str = pub.get('publication_date', '').split('T')[0]
         try:
             pub_date = datetime.strptime(pub_date_str, '%Y-%m-%d').date()
@@ -60,27 +59,27 @@ def create_jekyll_post(date_str):
         date_str (str): The date in 'YYYY-MM-DD' format.
     """
     # Get the links for the specified date
-    twitter_links = get_twitter_links_by_date(date_str)
+    social_links = get_social_links_by_date(date_str)
 
-    if not twitter_links:
-        print(f"No Twitter links found for {date_str}. No post created.")
+    if not social_links:
+        print(f"No social media links found for {date_str}. No post created.")
         return
 
     # Generate the Markdown list of links
     markdown_output = ""
-    for link in twitter_links:
+    for link in social_links:
         escaped_title = link['title'].replace('|', '\\|')
         markdown_output += f"- [{escaped_title}]({link['original_link']})\n"
 
     # Define post details
     post_title = f"Links for {date_str}"
-    post_filename = f"{date_str}-twitter-links.md"
+    post_filename = f"{date_str}-links.md"
     script_dir = os.path.dirname(os.path.abspath(__file__))
     post_filepath = os.path.join(script_dir, '..', '_posts', post_filename)
 
     # Create the full post content with Jekyll front matter
     post_content = f"""---
-layout: posts
+layout: post
 title: "{post_title}"
 date: {date_str}
 ---
@@ -102,7 +101,7 @@ def main():
     It expects a date as a command-line argument.
     """
     if len(sys.argv) != 2:
-        print("Usage: python list_twitter_links_by_date.py YYYY-MM-DD")
+        print("Usage: python list_links_by_date.py YYYY-MM-DD")
         sys.exit(1)
 
     date_str = sys.argv[1]

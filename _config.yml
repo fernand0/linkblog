@@ -28,7 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://linkblog.elmundoesimperfecto.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 #sidebar
-default-image: webjeda-logo-big.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
+#default-image: webjeda-logo-big.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
 
 #footer
 
@@ -44,10 +44,14 @@ paginate: 100
 paginate_path: /page:num/
 
 #social
-twitter: http://twitter.com/fernand0
+twitter: http://x.com/fernand0
 github: http://github.com/fernand0
-facebook: http://facebook.com/fernando.tricas
-email: fernand0+web@elmundoesimperfecto.com
+facebook: http://facebook.com/fernand0.tricas
+mastodon: https://mastodon.social/@fernand0 # Placeholder URL
+bluesky: https://bsky.app/profile/fernand0.bsky.social
+linkedin: https://www.linkedin.com/in/fernand0
+instagram: https://www.instagram.com/ftricas/
+flickr: https://www.flickr.com/photos/fernand0/
 
 # Sass style
 sass:
