@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the linkblog directory
-# cd /home/ftricas/usr/src/Python/deGitHub/linkblog
+cd "$HOME/usr/src/web/deGitHub/linkblog"
 
 # Get yesterday's date in YYYY-MM-DD format
 yesterday=$(date -d "yesterday" +%Y-%m-%d)
