@@ -12,14 +12,15 @@ from datetime import datetime
 from socialModules.modulePublicationCache import PublicationCache
 
 def get_social_links_by_date(date_str):
-    """Retrieves social media links for a specific date from the publication cache.
+    """Retrieves social media links for a specific date from the publication
+    cache.
 
     Args:
         date_str (str): The date in 'YYYY-MM-DD' format.
 
     Returns:
-        list: A list of dictionaries, each containing the 'title' and 'original_link'
-              of a Twitter publication for the given date.
+        list: A list of dictionaries, each containing the 'title' and
+        'original_link' of a Twitter publication for the given date.
     """
     try:
         # Validate the date format
@@ -32,7 +33,7 @@ def get_social_links_by_date(date_str):
     cache = PublicationCache()
 
     # Get all publications from social media
-    social_publications = cache.get_publications_by_service('twitter')
+    social_publications = cache.get_publications_by_service('mastodon')
 
     # Filter publications by the selected date
     links_for_date = []
